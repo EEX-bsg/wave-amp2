@@ -200,8 +200,8 @@ function wave.createOutput(out, volume, filter, throttle, clipMode)
 				function output.nativePlayNote(note, pitch, volume)
 					if output.volume * volume > 0 then
 						if note <= 16 then
-                            --nb.playSound("minecraft:block.note_block."..wave._newSoundMap[note], volume, math.pow(2, (pitch - 12) / 12))
-                            nb.playNote(wave._newSoundMap[note], volume, pitch)
+                            nb.playSound("minecraft:block.note_block."..wave._newSoundMap[note], volume, math.pow(2, (pitch - 12) / 12))
+                            --nb.playNote(wave._newSoundMap[note], volume, pitch)
                         else
                             nb.playSound(wave._newSoundMap[note], volume, math.pow(2, (pitch - 12) / 12))
                         end
